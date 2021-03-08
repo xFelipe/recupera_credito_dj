@@ -1,0 +1,18 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+ipdb = "*"
+
+[packages]
+django = "~=3.1"
+djangorestframework = "~=3.12"
+drf-url-filters = "~=0.5"
+six = "~=1.15"
+django-polymorphic = "~=3.0"
+django-rest-polymorphic = "*"
+
+[requires]
+python_version = "3.8"
