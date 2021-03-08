@@ -23,7 +23,6 @@ class PessoaViewSet(FiltersMixin, viewsets.ModelViewSet):
     search_fields = ['nome', 'cpf']
     filter_mapping = {'nome': 'nome'}
     filter_validation_schema = pessoa_query_schema
-    create = None
 
 
 class EmpresaViewSet(viewsets.ModelViewSet):
@@ -34,7 +33,7 @@ class EmpresaViewSet(viewsets.ModelViewSet):
         data = request.data
         filtered_data = {key: value
                          for key, value in data.items()
-                         if key != 'donos'}
+                         if key != 'donos' and key in ['nome', 'cnpj']}
         nova_empresa = Empresa(**filtered_data)
         nova_empresa.save()
         if request.data.get('donos'):
