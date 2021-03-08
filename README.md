@@ -1,7 +1,14 @@
  # API de cadastro de bens e identificação dos donos
  
+ ## Como rodar projeto:
+  - Via docker-compose: `docker-compose up`
+  - Com python local:
+    - Preparação de ambiente: `pipenv shell` ou `pip install -r requirements.txt`
+    - Execução de migrações: `python manage.py migrate`
+    - Inicialização do servidor: `python manage.py runserver`
  porta utilizada: `8000`
  
+ ## Documentação
  Rotas:
   - Root da API/documentação: `/api/`
   - Recurso Pessoas:
